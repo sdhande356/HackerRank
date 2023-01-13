@@ -27,17 +27,26 @@ Otherwise, print "java.lang.Exception: Breadth and height must be positive" with
 */
 
 
-public class JavaStaticInitBlock
-{
-	static int B,H;
-	static boolean flag = true;
-	static {
-    	Scanner sc = new Scanner(System.in);
-    	B = sc.nextInt();
-	    H = sc.nextInt();
-	    if(B<=0 || H<=0){
-	        System.out.println("java.lang.Exception: Breadth and height must be positive");
-	        flag = false;
-		}
-	}
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+public class Solution {
+static int B, H; 
+
+static Scanner Scn = new Scanner(System.in);
+static {
+B = Scn.nextInt();
+H = Scn.nextInt();
+}
+public static void main(String args[]){
+    if (Solution.B>0 && Solution.H>0){
+        System.out.println(Solution.B*Solution.H);
+    }
+    else{
+System.out.println("java.lang.Exception: Breadth and height must be positive");
+    }
+}
+
 }
